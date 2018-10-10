@@ -1,4 +1,4 @@
-package pl.michalkrause.javaee.zad01.src;
+package pl.michalkrause.TechUT.zad01.src;
 
 public class HelloWorld{
 

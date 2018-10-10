@@ -1,0 +1,5 @@
+katalog db w roocie</br>
+ jeżeli nie działa wpisać chmod 700 db
+ 
+./db/runHSQLDBServer.sh </br>
+./db/runHSQLDBClient.sh

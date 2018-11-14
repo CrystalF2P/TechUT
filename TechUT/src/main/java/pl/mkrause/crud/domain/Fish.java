@@ -15,7 +15,7 @@ public class Fish {
 	
 	
 	
-	public Fish(String gatunek, Date dataZlowienia, float waga) {
+	public Fish(String gatunek, Date dataZlowienia, double waga) {
 		super();
 		this.gatunek = gatunek;
 		this.dataZlowienia = dataZlowienia;

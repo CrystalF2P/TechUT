@@ -9,8 +9,6 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.example.jdbcdemo.domain.Person;
-
 import pl.mkrause.crud.domain.Fish;
 
 public class CrudJDBC implements Crud {

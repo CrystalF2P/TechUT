@@ -15,17 +15,18 @@ import javax.persistence.NamedQuery;
 })
 public class Fish {
 
-	private long id;
+	private Long id;
 	private String gatunek;
 	private int ilosc;
 	private double waga;
+	private boolean sold = false;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	
@@ -51,6 +52,14 @@ public class Fish {
 	}
 	public void setWaga(double waga) {
 		this.waga = waga;
+	}
+	
+	public Boolean getSold() {
+		return sold;
+	}
+
+	public void setSold(Boolean sold) {
+		this.sold = sold;
 	}
 	
 }

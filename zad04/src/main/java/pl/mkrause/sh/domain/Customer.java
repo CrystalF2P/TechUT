@@ -19,15 +19,16 @@ import javax.persistence.TemporalType;
 
 @Entity
 @NamedQueries({ 
-	@NamedQuery(name = "angler.all", query = "Select a from Angler a"),
-	@NamedQuery(name = "angler.boatNumber", query = "Select a from Angler a where a.boatnum = :boatnum")
+	@NamedQuery(name = "customer.all", query = "Select * from Customer c"),
+	@NamedQuery(name = "customer.byVipId", query = "Select c from Customer c where c.vip = true")
 })
-public class Angler {
+public class Customer {
 
 	private Long id;
 
 	private String firstName = "unknown";
-	private int boatnum;
+	private boolean vip = false;
+	private int vipId; //numer karty vip, żeby wyszukać klienta
 
 	private List<Fish> pluralfish = new ArrayList<Fish>();
 
@@ -47,14 +48,19 @@ public class Angler {
 		this.firstName = firstName;
 	}
 
-	public int getBoatNum() {
-		return boatnum;
+	public boolean getVip() {
+		return vip;
+	}	
+	public void setVip(boolean vip) {
+		this.vip = vip;
 	}
 	
-	public void setBoatNum(int boatnum) {
-		this.boatnum = boatnum;
+	public int getVipId() {
+		return vipId;
 	}
-	
+	public void setVipId(int vipid) {
+		this.vipId = vipid;
+	}
 
 	// Be careful here, both with lazy and eager fetch type
 	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)

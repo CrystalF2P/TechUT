@@ -3,21 +3,21 @@ package pl.mkrause.sh.service;
 import java.util.List;
 
 import pl.mkrause.sh.domain.Fish;
-import pl.mkrause.sh.domain.Angler;
+import pl.mkrause.sh.domain.Customer;
 
 public interface Manager {
 	
-	void addFisherman(Angler angler);
-	List<Angler> getAllFishermen();
-	void deleteFisherman(Angler angler);
-	Angler findAnglerByBoat(int boatnum);
+	void addCustomer(Customer customer);
+	List<Customer> getAllCustomers();
+	void deleteCustomer(Customer customer);
+	Customer findCustomerByVipId(int vipid);
 	
 	Long addNewFish(Fish fish);
 	List<Fish> getAvailableFish();
-	void disposeFish(Angler angler, Fish fish);
+	void disposeFish(Customer customer, Fish fish);
 	Fish findFishById(Long id);
 
-	List<Fish> getBroughtFish(Angler angler);
-	void getFish(Long anglerId, Long fishId);
+	List<Fish> getBoughtFish(Customer customer);
+	void sellFish(Long customerId, Long fishId);
 
 }

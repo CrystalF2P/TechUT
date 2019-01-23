@@ -46,7 +46,7 @@ public class Fish {
     }
 
     //tylko niepusta, nie moze byc unique bo waga sie powtarza
-    @Column(nullable = false)
+    @Column(unique=true, nullable = false)
     public double getWaga() {
         return waga;
     }
@@ -67,7 +67,7 @@ public class Fish {
 
     
     //Polaczenie M:M z Fisherman
-    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     public List<Fisherman> getFishermen() {
         return fishermen;
     }

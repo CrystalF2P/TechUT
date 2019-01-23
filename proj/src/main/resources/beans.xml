@@ -19,7 +19,7 @@
 		configure as beans
 	-->
 	<context:component-scan
-		base-package="pl.msoroka.techut.plane.service" />
+		base-package="pl.mkrause.service" />
  	
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
 	destroy-method="close">
@@ -45,7 +45,7 @@
         <prop key="hibernate.show_sql">true</prop>
 			</props>
 		</property>
-		<property name="packagesToScan" value="pl.msoroka.techut.plane.domain" />
+		<property name="packagesToScan" value="pl.mkrause.domain" />
 	</bean>
 
 	<bean id="txManager"

@@ -3,6 +3,9 @@ package pl.mkrause.domain;
 import javax.persistence.*;
 
 @Entity
+@NamedQueries({
+    @NamedQuery(name = "card.all", query = "Select c from Card c"),
+})
 public class Card {
 
     private long id;
@@ -27,7 +30,7 @@ public class Card {
 
     //unique, niepuste
     @Column(unique = true, nullable = false)
-    public String getCardNumber() {
+    public String getCardId() {
         return cardId;
     }
 

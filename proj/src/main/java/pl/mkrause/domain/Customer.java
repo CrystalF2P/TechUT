@@ -46,7 +46,7 @@ public class Customer {
         return nazwisko;
     }
 
-    public void setnazwisko(String nazwisko) {
+    public void setNazwisko(String nazwisko) {
         this.nazwisko = nazwisko;
     }
 

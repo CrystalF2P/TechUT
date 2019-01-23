@@ -28,12 +28,16 @@ public interface FishStoreManager {
 
 
     void addFisherman(Fisherman fisherman);
-
+    void updateFisherman(Fisherman fisherman);
+    void deleteFisherman(long id);
+    Fisherman findFishermanById(long id);
 
     void addCard(Card card);
+    void updateCard(Card card);
+    void deleteCard(long id);
+    Card findCardById(long id);
+    
 
-    
-    
     
     
     //Polaczenia

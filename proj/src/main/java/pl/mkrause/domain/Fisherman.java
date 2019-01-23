@@ -4,6 +4,9 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
+@NamedQueries({
+        @NamedQuery(name = "fisherman.all", query = "Select f from Fisherman f"),
+})
 public class Fisherman {
 
     private long id;
@@ -57,7 +60,6 @@ public class Fisherman {
         this.dataUrodzenia = dataUrodzenia;
     }
 
-    
     //Polaczenie 1:1 z Card
     @OneToOne(cascade = CascadeType.ALL)
     public Card getCard() {

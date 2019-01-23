@@ -1,6 +1,6 @@
 package pl.mkrause.crud.domain;
 
-import java.sql.Date;
+import java.util.Date;
 
 public class Fish {
 	
@@ -8,12 +8,9 @@ public class Fish {
 	private String gatunek;
 	private Date dataZlowienia;
 	private double waga;
-
 	
 	public Fish() {
 	}
-	
-	
 	
 	public Fish(String gatunek, Date dataZlowienia, double waga) {
 		super();
@@ -21,16 +18,13 @@ public class Fish {
 		this.dataZlowienia = dataZlowienia;
 		this.waga = waga;	
 	}
-	
-	
-	
+		
 	public long getId() {
 		return id;
 	}
 	public void setId(long id) {
 		this.id = id;
-	}
-	
+	}	
 	
 	public String getGatunek() {
 		return gatunek;
@@ -53,9 +47,5 @@ public class Fish {
 	}
 	public void setWaga(double waga) {
 		this.waga = waga;
-	}
-	
-	
-	
-	
+	}	
 }
